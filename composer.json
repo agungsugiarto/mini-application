@@ -1,7 +1,7 @@
 {
-    "name": "laravel/lumen",
-    "description": "The Laravel Lumen Framework.",
-    "keywords": ["framework", "laravel", "lumen"],
+    "name": "agungsugiarto/mini-application",
+    "description": "The PHP Mini Application.",
+    "keywords": ["framework", "mini-framework", "php-mini-framework"],
     "license": "MIT",
     "type": "project",
     "require": {
