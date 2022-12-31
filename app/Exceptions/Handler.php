@@ -2,11 +2,10 @@
 
 namespace App\Exceptions;
 
-use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Validation\ValidationException;
-use Laravel\Lumen\Exceptions\Handler as ExceptionHandler;
-use Symfony\Component\HttpKernel\Exception\HttpException;
+use Mini\Framework\Exceptions\Handler as ExceptionHandler;
+use League\Route\Http\Exception as HttpException;
 use Throwable;
 
 class Handler extends ExceptionHandler

@@ -1,6 +1,8 @@
 <?php
 
-/** @var \Laravel\Lumen\Routing\Router $router */
+/** @var \Mini\Framework\Routing\Router $router */
+
+use Laminas\Diactoros\Response\JsonResponse;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,5 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return new JsonResponse(app()->version());
 });
