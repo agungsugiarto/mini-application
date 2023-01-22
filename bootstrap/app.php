@@ -1,5 +1,7 @@
 <?php
 
+define('MINI_START', microtime(true));
+
 require_once __DIR__.'/../vendor/autoload.php';
 
 (new \Mini\Framework\Bootstrap\LoadEnvironmentVariables(
@@ -76,10 +78,6 @@ $app->configure('app');
 //     App\Http\Middleware\ExampleMiddleware::class
 // ]);
 
-// $app->routeMiddleware([
-//     'auth' => App\Http\Middleware\Authenticate::class,
-// ]);
-
 /*
 |--------------------------------------------------------------------------
 | Register Service Providers
@@ -92,7 +90,6 @@ $app->configure('app');
 */
 
 // $app->register(App\Providers\AppServiceProvider::class);
-// $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
 
 /*
@@ -106,9 +103,9 @@ $app->configure('app');
 |
 */
 
-$router = $app->router;
-
-$app->router->group('', function () use ($router) {
+$app->router->group([
+    'namespace' => 'App\Http\Controllers',
+], function ($router) {
     require __DIR__.'/../routes/web.php';
 });
 

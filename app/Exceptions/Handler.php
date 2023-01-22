@@ -2,11 +2,11 @@
 
 namespace App\Exceptions;
 
-use Illuminate\Database\Eloquent\ModelNotFoundException;
-use Illuminate\Validation\ValidationException;
-use Mini\Framework\Exceptions\Handler as ExceptionHandler;
-use League\Route\Http\Exception as HttpException;
 use Throwable;
+use Illuminate\Validation\ValidationException;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Mini\Framework\Exceptions\Handler as ExceptionHandler;
+use Mini\Framework\Exceptions\HttpException;
 
 class Handler extends ExceptionHandler
 {
@@ -16,7 +16,6 @@ class Handler extends ExceptionHandler
      * @var array
      */
     protected $dontReport = [
-        AuthorizationException::class,
         HttpException::class,
         ModelNotFoundException::class,
         ValidationException::class,

@@ -2,8 +2,6 @@
 
 /** @var \Mini\Framework\Routing\Router $router */
 
-use Laminas\Diactoros\Response\JsonResponse;
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -16,5 +14,5 @@ use Laminas\Diactoros\Response\JsonResponse;
 */
 
 $router->get('/', function () use ($router) {
-    return new JsonResponse(app()->version());
+    return $router->app->version();
 });
