@@ -75,7 +75,9 @@ $app->configure('app');
 */
 
 // $app->middleware([
-//     App\Http\Middleware\ExampleMiddleware::class
+//     \Mini\Framework\Http\Middleware\Cors\CorsMiddleware::class,
+//     \Mini\Framework\Http\Middleware\StartSession::class,
+//     \App\Http\Middleware\ExampleMiddleware::class
 // ]);
 
 /*
@@ -91,6 +93,9 @@ $app->configure('app');
 
 // $app->register(App\Providers\AppServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
+
+// Enable debug handler using spatie/ignition
+// $app->register(\Mini\Framework\Exceptions\Ignition\IgnitionServiceProvider::class);
 
 /*
 |--------------------------------------------------------------------------

@@ -18,6 +18,12 @@ class ExampleMiddleware
         /** @var ResponseInterface */
         $response = $next($request);
 
+        app('Psr\Log\LoggerInterface')->debug([
+            'request' => \Laminas\Diactoros\Request\ArraySerializer::toArray($request),
+            'response' => \Laminas\Diactoros\Response\ArraySerializer::toArray($response),
+            'session' => $request->getAttribute('session')?->all(),
+        ]);
+
         return $response;
     }
 }
