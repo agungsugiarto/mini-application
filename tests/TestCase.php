@@ -2,14 +2,14 @@
 
 namespace Tests;
 
-use Laravel\Lumen\Testing\TestCase as BaseTestCase;
+use Mini\Framework\Testing\TestCase as BaseTestCase;
 
 abstract class TestCase extends BaseTestCase
 {
     /**
      * Creates the application.
      *
-     * @return \Laravel\Lumen\Application
+     * @return \Mini\Framework\Application
      */
     public function createApplication()
     {
